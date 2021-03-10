@@ -47,10 +47,10 @@
                     </td>
 
                     <td>
-                        <a th:href="@{/admin/edit/{id}(id=${user.id})}">edit</a>
+                        <a th:href="@{/admin/edit/{id}(id=${user.id})}">edit</a> <!--- здесь всплывающее окно -->
                     </td>
                     <td>
-                        <form th:method="POST" th:action="@{/admin/delete(id=${user.getId()})}">
+                        <form th:method="POST" th:action="@{/admin/delete(id=${user.getId()})}"> <!--и здесь -->
                             <input type="submit" value="Delete">
                         </form>
 
