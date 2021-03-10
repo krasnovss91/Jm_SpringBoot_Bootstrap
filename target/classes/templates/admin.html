@@ -5,12 +5,13 @@
     <title>Title</title>
 </head>
 
-<body>
+<!--<body> -->
 <div align="center">
     <h1>Edit User</h1>
 
     <h1>list of users</h1>
     <div th:if="${!listUsers.isEmpty()}">
+        <!--
         <table class="tg" border="3">
             <tr>
                 <td width="120">id</td>
@@ -20,6 +21,17 @@
                 <td width="50">edit</td>
                 <td width="50">delete</td>
             </tr>
+            --->
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Имя</th>
+                <th scope="col">Пароль</th>
+                <th scope="col">Роли</th>
+            </tr>
+            </thead>
+            <tbody>
             <th:block th:each="user : ${listUsers}">
                 <tr>
                     <td th:text="${user.id}"></td>
@@ -71,5 +83,5 @@
     <a th:href="@{/logout}">Logout</a>
 </div>
 
-</body>
+</tbody>
 </html>

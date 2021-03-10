@@ -22,12 +22,11 @@
         <tr th:each="user : ${users}">
             <p>
             <td th:text="${user.id}"
-            </td>
+            <td>
             <td th:text="${user.username}"
             </td>
             <td th:text="${user.password}"
             </td>
-
             <td>
                 <div th:each="role: ${user.roles}">
                     <div th:text="${role.name}"></div>
