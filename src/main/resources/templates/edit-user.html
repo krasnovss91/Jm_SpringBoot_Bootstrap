@@ -41,7 +41,8 @@
 
 <h1>edit user form</h1>
 
-<form action="/admin/edit" method="POST">
+
+<form action="/admin/edit" method="POST"> <!--- эту форму поместить внутрь всплывающего окна -->
     <input type="hidden" name="id" th:value="${user.id}">
 
     <label for="username">Username</label>
@@ -78,7 +79,11 @@
         </p>
     </form>
 </div>
-
+<!----
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>  пример вкладки
+  </li>
+-->
 <br/>
 
 <a th:href="@{/admin}">Return</a>
