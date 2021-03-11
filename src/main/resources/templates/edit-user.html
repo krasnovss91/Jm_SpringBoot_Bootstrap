@@ -63,8 +63,24 @@
 </form>
 
 </div>
+
+<div>
+    <h1>add user form</h1>
+    <form class="tg" action="#" th:action="@{admin/add}"  th:object="${user}" method="post">
+        <p>name: <input type="text" th:field="*{username}" required/></p>
+        <p>password: <input type="text" th:field="*{password}" required/></p>
+
+        <p>role: <input type="text" th:field="*{roles}" required/></p>
+
+        <p>
+            <input type="submit" value="Submit" />
+            <input type="reset" value="Reset" />
+        </p>
+    </form>
+</div>
+
 <br/>
 
 <a th:href="@{/admin}">Return</a>
 </body>
-</html>g
+</html>
