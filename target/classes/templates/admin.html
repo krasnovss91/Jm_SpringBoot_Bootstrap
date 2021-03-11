@@ -48,7 +48,7 @@
                                     </a>
                                 </td>
                                 <td>
-                                    <a th:href="@{/delete/{id}(id=${user.id})}"
+                                    <a th:href th:method="POST" th:action="@{/admin/delete(id=${user.getId()})}"
                                        class="btn btn-primary">
                                         <i class="fas fa-user-times ml-2"></i>
                                     </a>
