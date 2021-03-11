@@ -45,6 +45,7 @@
     <input type="hidden" name="id" th:value="${user.id}">
 
     <label for="username">Username</label>
+    <!--- <input type="text" class="form-control" placeholder="Username" required="required"> --->
     <input type="text" name="username" id="username" th:value="${user.username}">
     <br/>
     <label for="password">Password</label>
@@ -55,7 +56,10 @@
         <option value="ROLE_ADMIN">ADMIN</option>
         <option value="ROLE_USER">USER</option>
     </select>
-    <input type="submit" value="Edit">
+   <!--- <input type="submit" value="Edit"> -->
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary btn-block" value="Edit"></button>
+    </div>
 </form>
 
 </div>
