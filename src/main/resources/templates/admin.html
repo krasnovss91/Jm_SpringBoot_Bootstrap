@@ -41,8 +41,16 @@
                                         <div th:text="${role.name}"></div>
                                     </div>
                                 </td>
-                                <div class="modal fade">
-                                    <div class="modal-dialog">
+                                
+                                <td>
+                                <a th:href="@{/admin/edit/{id}(id=${user.id})}"
+                                   class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#edit">
+                                    <i class="fas fa-user-edit ml-2"></i>
+                                </a>
+                                </td>
+
+                                <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
                                                 Edit User
@@ -75,14 +83,6 @@
                                         </div>
                                     </div>
                                 </div>
-
-                                <td>
-                                  
-                                    <a th:href="@{/admin/edit/{id}(id=${user.id})}"
-                                       class="btn btn-primary" data-toggle="modal" data-target="modal fade">
-                                        <i class="fas fa-user-edit ml-2"></i>
-                                    </a>
-                                </td>
 
                                 <td>
                                     <a th:href th:method="POST" th:action="@{/admin/delete(id=${user.getId()})}"
