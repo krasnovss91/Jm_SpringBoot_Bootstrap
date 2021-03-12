@@ -48,8 +48,7 @@
                                                 Edit User
                                             </div>
                                             <div class="modal-body">
-                                                 <form th:method="POST" th:action="@{/admin/edit/{id}(id=${user.id})}" >
-                                               <!--- <form action="/admin/edit/id" method="POST">  --->
+                                                <form th:method="POST" th:action="@{/admin/edit/{id}(id=${user.id})}">
                                                     <input type="hidden" name="id" th:value="${user.id}">
 
                                                     <label for="username">Username</label>
@@ -76,7 +75,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <td> <!---- edit и delete сделать всплывающими окнами --->
+
+                                <td>
 
                                     <a th:href="@{/admin/edit/{id}(id=${user.id})}"
                                        class="btn btn-primary">
