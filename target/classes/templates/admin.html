@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
 </head>
-
+<!---- сделать отдельные вкладки для списка и добавления --->
 <body>
 <div class="container my-2">
     <div class="card">
@@ -41,12 +41,48 @@
                                         <div th:text="${role.name}"></div>
                                     </div>
                                 </td>
-                                <td>
+                                <div class="modal fage">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                Edit User
+                                            </div>
+                                            <div class="modal-body">
+                                                <form :action="/admin/edit/id" method="POST">
+                                                    <input type="hidden" name="id" th:value="${user.id}">
+
+                                                    <label for="username">Username</label>
+
+                                                    <input type="text" name="username" id="username"
+                                                           th:value="${user.username}">
+                                                    <br/>
+                                                    <label for="password">Password</label>
+                                                    <input type="text" name="password" id="password"
+                                                           th:value="${user.password}">
+                                                    <br/>
+
+                                                    <select name="roles" id="roles" multiple>
+                                                        <option value="ROLE_ADMIN">ADMIN</option>
+                                                        <option value="ROLE_USER">USER</option>
+                                                    </select>
+
+                                                    <div class="form-group">
+                                                        <button type="submit" class="btn btn-primary btn-block"
+                                                                value="Edit"></button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <td> <!---- edit и delete сделать всплывающими окнами --->
+
                                     <a th:href="@{/admin/edit/{id}(id=${user.id})}"
                                        class="btn btn-primary">
                                         <i class="fas fa-user-edit ml-2"></i>
                                     </a>
                                 </td>
+
                                 <td>
                                     <a th:href th:method="POST" th:action="@{/admin/delete(id=${user.getId()})}"
                                        class="btn btn-primary">
@@ -64,5 +100,3 @@
     </div>
 </div>
 </body>
-
-</html>
