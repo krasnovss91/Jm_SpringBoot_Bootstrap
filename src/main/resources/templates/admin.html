@@ -41,14 +41,14 @@
                                         <div th:text="${role.name}"></div>
                                     </div>
                                 </td>
-                                <div class="modal fage">
+                                <div class="modal fade">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
                                                 Edit User
                                             </div>
                                             <div class="modal-body">
-                                                 <form th:action="@{/admin/edit/{id}(id=${user.id})}" method="POST">
+                                                 <form th:method="POST" th:action="@{/admin/edit/{id}(id=${user.id})}" >
                                                <!--- <form action="/admin/edit/id" method="POST">  --->
                                                     <input type="hidden" name="id" th:value="${user.id}">
 
