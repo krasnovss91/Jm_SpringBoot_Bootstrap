@@ -56,7 +56,8 @@
                                                 Edit User
                                             </div>
                                             <div class="modal-body">
-                                                <form th:method="POST" th:action="@{/admin/edit/{id}(id=${user.id})}">
+                                          <form th:method="POST" th:action="@{/admin/edit/{id}(id=${user.id})}">
+                                             <!--   <form th:action="/admin/edit" th:method="POST">  -->
                                                     <input type="hidden" name="id" th:value="${user.id}">
 
                                                     <label for="username">Username</label>
