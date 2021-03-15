@@ -36,12 +36,13 @@ public class AdminController {
     @GetMapping("/edit/{id}")
     public String editUser(@PathVariable("id") long id, Model model) {
         model.addAttribute("user", userService.getUserById(id));
-        return "admin";
+        return "edit-user";
     }
 
 
 
-    @PostMapping("/edit/{id}")
+   // @PostMapping("/edit/{id}")
+    @PostMapping("/edit")
     public String editUser(@ModelAttribute("user") User user, Model model){
         userService.editUser(user);
         model.addAttribute("user", user);
