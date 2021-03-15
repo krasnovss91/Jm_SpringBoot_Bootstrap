@@ -32,14 +32,14 @@ public class AdminController {
         userService.saveUser(user);
         return "redirect:/admin";
     }
-/*
+
     @GetMapping("/edit/{id}")
     public String editUser(@PathVariable("id") long id, Model model) {
         model.addAttribute("user", userService.getUserById(id));
-        return "admin"; //этот метод бросает на уже несуществующую страницу
+        return "admin";
     }
 
- */
+
 
     @PostMapping("/edit/{id}")
     public String editUser(@ModelAttribute("user") User user, Model model){
