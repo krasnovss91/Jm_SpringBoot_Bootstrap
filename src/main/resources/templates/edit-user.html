@@ -40,34 +40,30 @@
 
 <h1>edit user form</h1>
 <div class="edit-form">
-<form action="/admin/edit" method="POST">
-    <input type="hidden" name="id" th:value="${user.id}">
+    <form action="/admin/edit" method="POST">
+        <input type="hidden" name="id" th:value="${user.id}">
 
-    <label for="username">Username</label>
-    <input type="text" name="username" id="username" th:value="${user.username}">
-    <br/>
-    <label for="password">Password</label>
-    <input type="text" name="password" id="password" th:value="${user.password}">
-    <br/>
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" th:value="${user.username}">
+        <br/>
+        <label for="password">Password</label>
+        <input type="text" name="password" id="password" th:value="${user.password}">
+        <br/>
 
 
-    <select name="roles" id="roles" multiple>
-        <option value="ROLE_ADMIN">ADMIN</option>
-        <option value="ROLE_USER">USER</option>
-    </select>
+        <select name="roles" id="roles" multiple>
+            <option value="ROLE_ADMIN">ADMIN</option>
+            <option value="ROLE_USER">USER</option>
+        </select>
 
-    <div class="form-group">
-        <button type="submit" class="btn btn-primary btn-lg">Edit</button>
-    </div>
-</form>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-lg">Edit</button>
+        </div>
+    </form>
 
 </div>
 <br/>
-<!--
- <div class="form-group">
-<button type="button" class="btn btn-secondary btn-lg" th:action="@{/admin}">Return</button>
- </div>
--->
+
 <a th:href="@{/admin}">Return</a>
 </body>
 </html>
