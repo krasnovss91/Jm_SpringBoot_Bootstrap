@@ -44,7 +44,7 @@
                                 
                                 <td>
                                 <a th:href="@{/admin/edit/{id}(id=${user.id})}"
-                                   class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#edit">
+                                   class="btn btn-primary" >
                                     <i class="fas fa-user-edit ml-2"></i>
                                 </a>
                                 </td>
@@ -86,7 +86,8 @@
                                 </div>
   ----->
                                 <td>
-                                    <a th:href="@{/delete/{id}(id=${user.id})}"
+                             <!--       <a th:href="@{/delete/{id}(id=${user.id})}" -->
+                                    <a th:href="@{/delete}"
                                        class="btn btn-primary">
                                         <i class="fas fa-user-times ml-2"></i>
                                     </a>
