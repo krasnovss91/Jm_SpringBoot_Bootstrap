@@ -87,8 +87,9 @@
   ----->
                                 <td>
                                     <a th:href th:method="POST" th:action="@{/admin/delete(id=${user.getId()})}"
-                                       class="btn btn-primary">
+                                       class="btn btn-primary" data-bs-target="#delete">
                                         <i class="fas fa-user-times ml-2"></i>
+                                       <button type="submit"  class="btn btn-primary"> </button>
                                     </a>
                                 </td>
                             </tr>
