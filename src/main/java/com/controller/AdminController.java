@@ -39,9 +39,6 @@ public class AdminController {
         return "edit-user";
     }
 
-
-
-   // @PostMapping("/edit/{id}")
     @PostMapping("/edit")
     public String editUser(@ModelAttribute("user") User user, Model model){
         userService.editUser(user);
