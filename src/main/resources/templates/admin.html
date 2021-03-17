@@ -41,54 +41,36 @@
                                         <div th:text="${role.name}"></div>
                                     </div>
                                 </td>
-                                
+
                                 <td>
-                                    <form  th:action="@{/admin/edit/{id}(id=${user.id})}">
+                                    <form th:action="@{/admin/edit/{id}(id=${user.id})}">
                                         <input type="submit" value="Edit">
                                     </form>
-                                    <!---
-                                <a th:href="@{/admin/edit/{id}(id=${user.id})}"
-                                   class="btn btn-primary" >
-                                    <i class="fas fa-user-edit ml-2"></i>
-                                </a>
-                                -->
+
                                 </td>
 
                                 <td>
-                                    <!---
-                                    <a th:href="@{/admin/delete/{id}(id=${user.id})}"
-                                       class="btn btn-primary">
-                                        <i class="fas fa-user-times ml-2"></i>
-                                    </a>
-                                    -->
+
                                     <form th:method="POST" th:action="@{/admin/delete(id=${user.getId()})}">
                                         <input type="submit" value="Delete">
                                     </form>
                                 </td>
-                                <!----
-                                <td>
-                                    <a th:href th:method="POST" th:action="@{/admin/delete(id=${user.getId()})}"
-                                       class="btn btn-primary" action="#" input type="submit" data-bs-toggle="modal" data-bs-target="#delete">
-                                        <i class="fas fa-user-times ml-2"></i>
-                                    <button type="submit"  class="btn btn-primary"> </button>  здесь нужен сабмит с экшеном
-                                    </a>
-                                </td>
-                                --->
+
                             </tr>
                             </tbody>
                         </table>
                     </div>
                     <div>
                         <h1>add user form</h1>
-                        <form class="tg" action="#" th:action="@{admin/add}"  th:object="${user}" method="post">
+                        <form class="tg" action="#" th:action="@{admin/add}" th:object="${user}" method="post">
                             <p>name: <input type="text" th:field="*{username}" required/></p>
                             <p>password: <input type="text" th:field="*{password}" required/></p>
 
                             <p>role: <input type="text" th:field="*{roles}" required/></p>
 
                             <p>
-                                <input type="submit" value="Submit" />
-                                <input type="reset" value="Reset" />
+                                <input type="submit" value="Submit"/>
+                                <input type="reset" value="Reset"/>
                             </p>
                         </form>
                     </div>
