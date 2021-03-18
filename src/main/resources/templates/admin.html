@@ -64,6 +64,7 @@
                                     <tr>
                                         <th scope="col">ID</th>
                                         <th scope="col">Name</th>
+                                        <th scope="col">Password</th>
                                         <th scope="col">Role</th>
                                         <th scope="col">Edit</th>
                                         <th scope="col">Delete</th>
@@ -80,12 +81,12 @@
                                                     th:text="${userRole.getAuthority().replaceFirst('ROLE_', ' ')}"></span>
                                         </td>
                                         <td>
-                                            <a th:href="@{'/admin/' + ${user.id}}" class="btn btn-info eBtn">
+                                            <a th:href="@{'/admin/' + ${user.id}}" class="btn btn-info eBtn"> <!-- исправить адрес -->
                                                 Edit
                                             </a>
                                         </td>
                                         <td>
-                                            <a class="btn btn-danger" th:href="@{'/remove/' + ${user.id}}">
+                                            <a class="btn btn-danger" th:href="@{'/remove/' + ${user.id}}"> <!--и здесь -->
                                                 Delete
                                             </a>
                                         </td>
