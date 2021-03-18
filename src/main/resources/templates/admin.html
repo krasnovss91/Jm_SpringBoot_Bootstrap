@@ -30,7 +30,11 @@
                            aria-controls="profile" aria-selected="false">New User</a>
                     </li>
                 </ul>
-                
+
+         <!--       <div class="tab-pane fade" id="profile" role="tabpanel"  aria-labelledby="profile-tab"> -->
+                <div class="tab-content border rounded bg-white " id="myTabContent">
+                    <div class="tab-pane fade show active " id="home" role="tabpanel"
+                         aria-labelledby="home-tab">
                 <div class="col-md-10">
                     <h2 th:case="null">No record found !!</h2>
                     <div th:case="*">
@@ -70,6 +74,8 @@
                             </tr>
                             </tbody>
                         </table>
+                    </div>
+                </div>
                     </div>
                     <div>
                         <h1>add user form</h1>
