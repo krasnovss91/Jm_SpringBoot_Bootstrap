@@ -81,12 +81,12 @@
                                                     th:text="${userRole.getAuthority().replaceFirst('ROLE_', ' ')}"></span>
                                         </td>
                                         <td>
-                                            <a th:href="@{'/admin/' + ${user.id}}" class="btn btn-info eBtn"> <!-- исправить адрес -->
+                                            <a th:href="@{'/admin/' + ${user.id}}" class="btn btn-info eBtn">
                                                 Edit
                                             </a>
                                         </td>
                                         <td>
-                                            <a class="btn btn-danger" th:href="@{/admin/delete(id=${user.getId()})}" th:method="POST"> <!--и здесь -->
+                                            <a class="btn btn-danger" th:href="@{/admin/delete(id=${user.getId()})}" th:method="POST">
                                                 Delete
                                             </a>
                                         </td>
@@ -134,7 +134,7 @@
         </div>
 
         <div class="myForm">
-            <form th:action="@{/admin/update}" th:object="${user}" method="post">
+            <form th:action="@{/admin/edit}" th:object="${user}" method="post">
                 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
                      aria-hidden="true">
                     <div class="modal-dialog" role="document">
@@ -165,8 +165,11 @@
 
                                 <div class="form-group text-center">
                                     <label class="col-form-label font-weight-bold">Roles</label>
-                                    <input type="text" class="form-control"
-                                           id="exampleDropdownFormRole5" th:field="*{roles}">
+
+                                    <select name="roles" id="roles" multiple>
+                                        <option value="ROLE_ADMIN">ADMIN</option>
+                                        <option value="ROLE_USER">USER</option>
+                                    </select>
                                 </div>
 
 
