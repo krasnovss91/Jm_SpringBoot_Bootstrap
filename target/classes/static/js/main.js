@@ -5,9 +5,9 @@ $(document).ready(function () {
 
         $.get(href, function (user, status) {
             $('.myForm #id').val(user.id)
-            $('.myForm #name').val(user.username)
-            $('.myForm #lastName').val(user.password)
-            $('.myForm #age').val(user.role)
+            $('.myForm #username').val(user.username)
+            $('.myForm #password').val(user.password)
+            $('.myForm #roles').val(user.roles)
 
         });
         $('.myForm #exampleModal').modal();
