@@ -8,12 +8,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="untitled38" />
         <module name="Jm_SpringBoot_Bootstrap" />
+        <module name="Jm_SpringBoot_Bootstrap_1" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Jm_SpringBoot_Bootstrap" options="-parameters" />
+      <module name="Jm_SpringBoot_Bootstrap_1" options="-parameters" />
       <module name="untitled38" options="-parameters" />
     </option>
   </component>
