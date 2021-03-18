@@ -86,7 +86,7 @@
                                             </a>
                                         </td>
                                         <td>
-                                            <a class="btn btn-danger" th:href="@{'/remove/' + ${user.id}}"> <!--и здесь -->
+                                            <a class="btn btn-danger" th:href="@{/admin/delete(id=${user.getId()})}" th:method="POST"> <!--и здесь -->
                                                 Delete
                                             </a>
                                         </td>
