@@ -67,7 +67,7 @@ public class UserDaoImpl implements UserDao {
     public void editUser(User user) {
 
         if (user.getId() != 0) {
-            entityManager.merge(user);
+            entityManager.merge(user);// сюда уже приходит с username null
         }
 
     }
